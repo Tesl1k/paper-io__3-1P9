@@ -38,10 +38,29 @@ namespace paper_io
         /// Конструктор игрока.
         /// </summary>
         /// <param name="point">Точка, по координатам которой появится игрок.</param>
+        /// 
+        static Random random = new Random();        
         public Player(Point point)
         {
             Location = point;
             life = true;
+            Direction = (Direction)random.Next(4);
+            switch (Direction)
+            {
+                case Direction.Up:
+                    point.Y--;
+                    break;
+                case Direction.Right:
+                    point.X++;
+                    break;
+                case Direction.Down:
+                    point.Y++;
+                    break;
+                case Direction.Left:
+                    point.X--;
+                    break;
+            }
+
         }
 
         /// <summary>
@@ -167,6 +186,16 @@ namespace paper_io
         {
             int turn = (int) Direction + 1;
             Direction = turn > 3 ? Direction.Up : (Direction) turn;
+        }
+
+        public void Step(Game GameField)
+        {
+
+        }
+
+        public void Plume()
+        {
+
         }
     }
 }
