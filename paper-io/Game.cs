@@ -12,7 +12,7 @@ namespace paper_io
         /// <summary>
         /// Матрица игрового поля.
         /// </summary>
-        private Player[,] gamematrix;
+        public Player[,] gamematrix;
         /// <summary>
         /// Перечисление игрокоов.
         /// </summary>

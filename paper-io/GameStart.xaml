@@ -9,6 +9,6 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>        
     </Grid>
 </Window>

@@ -19,7 +19,7 @@ namespace paper_io
         Left,
     }
 
-    class Player
+    public class Player
     {
         public Direction Direction;
         /// <summary>
@@ -61,7 +61,7 @@ namespace paper_io
                     break;
             }
 
-        }
+        }      
 
         /// <summary>
         /// Метод, отвечающий за изменение направления движения игрока/бота
@@ -195,6 +195,16 @@ namespace paper_io
 
         public void Plume()
         {
+            LineSegment line = new LineSegment();
+            PathFigure lines = new PathFigure();
+            PathGeometry pathGeometry = new PathGeometry();            
+
+            lines.StartPoint = new Point(15, 30);
+            line.Point = new Point(10, 30);
+
+            lines.Segments.Add(line);
+            pathGeometry.Figures.Add(lines);
+
 
         }
     }
